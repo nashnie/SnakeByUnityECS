@@ -17,7 +17,7 @@ class EatFoodSystem : JobComponentSystem
         [ReadOnly] public ComponentDataArray<Position> Position;
     }
 
- Snake m_Players;
+    [Inject] Snake m_Players;
 
     struct Foods
     {
@@ -27,7 +27,7 @@ class EatFoodSystem : JobComponentSystem
         [ReadOnly] public ComponentDataArray<Position> Position;
     }
 
- Foods m_Foods;
+    [Inject] Foods m_Foods;
 
     [BurstCompile]
     struct CollisionJob : IJobParallelFor

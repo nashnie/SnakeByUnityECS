@@ -11,7 +11,7 @@ public class PlayerInputSystem : ComponentSystem
         public ComponentDataArray<Input> Input;
     }
 
-    private PlayerData m_Players;
+    [Inject] private PlayerData m_Players;
 
     protected override void OnUpdate()
     {

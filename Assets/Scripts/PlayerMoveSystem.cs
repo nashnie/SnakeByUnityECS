@@ -13,7 +13,7 @@ public class PlayerMoveSystem : ComponentSystem
         public ComponentDataArray<Input> Input;
     }
 
-    private Data m_Data;
+    [Inject] private Data m_Data;
 
     protected override void OnUpdate()
     {

@@ -13,7 +13,7 @@ public class FoodDestroySystem : ComponentSystem
         public ComponentDataArray<Food> Food;
     }
 
- private Data m_Data;
+    [Inject] private Data m_Data;
 
     private struct PlayerCheck
     {
@@ -21,7 +21,7 @@ public class FoodDestroySystem : ComponentSystem
         [ReadOnly] public ComponentDataArray<Input> PlayerInput;
     }
 
- private PlayerCheck m_PlayerCheck;
+    [Inject] private PlayerCheck m_PlayerCheck;
 
     protected override void OnUpdate()
     {
@@ -34,7 +34,7 @@ public class FoodDestroySystem : ComponentSystem
             food.timeToLive -= dt;
             if (food.timeToLive <= 0.0f || playerDead)
             {
-                //PostUpdateCommands.DestroyEntity(m_Data.Entities[i]);
+                PostUpdateCommands.DestroyEntity(m_Data.Entities[i]);
             }
             m_Data.Food[i] = food;
         }

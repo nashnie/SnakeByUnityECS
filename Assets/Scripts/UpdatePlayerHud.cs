@@ -15,7 +15,7 @@ public class UpdatePlayerHUD : ComponentSystem
         [ReadOnly] public ComponentDataArray<Health> Health;
     }
 
- PlayerData m_Players;
+    [Inject] PlayerData m_Players;
 
     private int m_CachedHealth = Int32.MinValue;
 

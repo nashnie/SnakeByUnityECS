@@ -12,7 +12,7 @@ class FoodSpawnSystem : ComponentSystem
         public ComponentDataArray<FoodSpawnSystemState> State;
     }
 
-    SpawnState m_State;
+    [Inject] SpawnState m_State;
 
     public static void SetupComponentData(EntityManager entityManager)
     {
